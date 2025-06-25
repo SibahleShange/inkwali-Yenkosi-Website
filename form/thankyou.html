@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        body {
+
+            background-image: url('images/background2.jpg');
+
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100;
+            background-size: cover;
+
+        }
+
+
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #ebe4f5;
+            z-index: 9;
+            padding: 10px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .brand-logo {
+            height: 60px;
+            width: 60px;
+        }
+
+        .nav-items {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav a i {
+            font-size: 32px;
+            /* Adjust the icon size (increase this value to make the icons larger) */
+            text-decoration: none;
+        }
+
+        .nav li {
+
+            margin-right: 10px;
+            /* Decrease the margin-right value to move the icons more to the left */
+            padding-bottom: 8px;
+        }
+
+        .nav li :hover {
+            color: #0074d9;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav span {
+            font-size: 20px;
+            color: black;
+            /* Change the color as needed */
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #ebe4f5;
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .menu-icon {
+            cursor: pointer;
+            color: black;
+            font-size: 30px;
+            position: absolute;
+            top: 20px;
+            right: 50px;
+            padding-right: 50px;
+        }
+
+
+        @media screen and (max-width: 600px) {
+
+            .col-25,
+            .col-75,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <!--this is the top navigation bar-->
+        <nav class="navbar">
+            <div class="nav">
+                <!--for the media links-->
+                <ul class="nav">
+                    <li>
+                        <a target="_blank"
+                            href="https://www.facebook.com/profile.php?id=61552812621091&mibextid=LQQJ4d">
+                            <i class='bx bxl-facebook-circle'></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://instagram.com/yenkosiinkwali?igshid=OGQ5ZDc2ODk2ZA==">
+                            <i class='bx bxl-instagram-alt'></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://x.com/InkwaliY?s=20">
+                            <i class='bx bxl-twitter'></i>
+                        </a>
+                    </li>
+                </ul>
+                <!--this is the logo-->
+                <div class="logo-container">
+                    <span>INKWALI</span>
+                    <img src="../images/logo.jpeg" class="brand-logo" alt="" style="width:42px;height:42px;">
+                    <span>YENKOSI</span>
+                </div>
+                <!-- Hamburger Menu Icon -->
+                <div class="menu-icon" onclick="toggleMobileMenu()">&#9776;</div>
+                <!-- Mobile Menu -->
+                <ul class="mobile-menu" id="mobileMenu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../About the leather/About the Leather.html ">About the leather</a></li>
+                    <li><a href="../DIY Method/DIY Method.html">DIY Method</a></li>
+                    <li><a href="../Brick&Mortar/Brick & Mortar.html">Brick and Mortar</a></li>
+                    <li><a href="../ShopppingCart/shoppingcart.html">Shop Now</a></li>
+
+
+                </ul>
+                <div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <h1>Thank You for Your Order!</h1>
+        <p>Your order has been successfully processed.</p>
+        <p>We will send a confirmation email to your provided email address.</p>
+        <p><a href="checkout.html">Return to Checkout</a></p>
+    </div>
+
+    <script>
+        // JavaScript to toggle the mobile menu
+        function toggleMobileMenu() {
+            var mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+
+        // JavaScript to handle mobile menu item clicks
+        var mobileMenuItems = document.querySelectorAll('.mobile-menu a');
+        mobileMenuItems.forEach(function (item) {
+            item.addEventListener('click', function () {
+                toggleMobileMenu(); // Close the mobile menu
+            });
+        });
+
+    </script>
+</body>
+
+</html>

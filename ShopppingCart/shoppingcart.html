@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping cart</title>
+  <link rel="stylesheet" href="styleCart.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+  <!--Header-->
+  <header>
+
+    <!--this is the top navigation bar-->
+    <nav class="navbar">
+        <div class="nav">
+            <!--for the media links-->
+            <ul class="nav">
+                <li>
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=61552812621091&mibextid=LQQJ4d">
+                        <i class='bx bxl-facebook-circle'></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://instagram.com/yenkosiinkwali?igshid=OGQ5ZDc2ODk2ZA==">
+                        <i class='bx bxl-instagram-alt'></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitter.com">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                </li>
+            </ul>
+            <!--this is the logo-->
+            <div class="logo-container">
+                <span>INKWALI</span>
+                <img src="../images/logo.jpeg" class="brand-logo" alt="" style="width:42px;height:42px;">
+                <span>YENKOSI</span>
+            </div>
+            <!-- Hamburger Menu Icon -->
+            <div class="menu-icon" onclick="toggleMobileMenu()">&#9776;</div>
+            <!-- Mobile Menu -->
+            <ul class="mobile-menu" id="mobileMenu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../About the leather/About the Leather.html ">About the leather</a></li>
+                <li><a href="../DIY Method/DIY Method.html ">DIY Method</a></li>
+                <li><a href="../Brick&Mortar/Brick & Mortar.html ">Brick and Mortar</a></li>
+                <li><a href="../ShopppingCart/shoppingcart.html">Shop Now</a></li>
+
+            </ul>
+            <div>
+                <!--cart icon-->
+                <i class='bx bxs-shopping-bag' id="cart-icon"></i>
+                <!--Cart-->
+                <div class="cart">
+                    <h2 class="cart-title">Your cart</h2>
+                    <!--Content-->
+                    <div class="cart-content">
+                    </div>
+                    <!--Total-->
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">$0</div>
+                    </div>
+                    <!--buy button-->
+
+                    <a href="../form/checkout.html"><button type="button" class="btn-buy">Check out</button></a>
+                    <!--cart close-->
+                    <i class='bx bx-x' id="close-cart"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+  <!--Shop-->
+  <section class="shop container">
+    <h2 class="section-title">Shop Now!</h2>
+
+    <!-- Search bar -->
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search for products...">
+      <button id="search-button">Search</button>
+    </div>
+    <div class="Shop-content">
+      <!--box 1-->
+      <div class="product-box">
+        <img src="../images/bag2.jpg" alt="" class="product-img">
+        <h2 class="product-title">Bag</h2>
+        <span class="price">$30</span>
+        <i class='bx bxs-shopping-bag add-cart'></i>
+		
+		<!-- Pop-up Cart -->
+<div id="cart-popup" class="popup">
+  <div class="popup-content">
+      <span class="close" id="close-popup">&times;</span>
+      <h3>Product: Bag</h3>
+      <p>Price: $30</p>
+      <label for="quantity">Quantity: </label>
+      <input type="number" id="quantity" value="1">
+      <label for="size">Size: </label>
+      <select id="size">
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+          <option value="XXL">XXL</option>
+      </select>
+      <button id="add-to-cart">Add to Cart</button>
+      <p id="subtotal">Subtotal: $30</p>
+  </div>
+</div>
+
+      </div>
+      <!--box 2-->
+      <div class="product-box">
+        <img src="../images/bag3.jpg" alt="" class="product-img">
+        <h2 class="product-title">Laptop bag</h2>
+        <span class="price">$50</span>
+        <i class='bx bxs-shopping-bag add-cart'></i>
+
+      </div>
+      <!--box 3-->
+      <div class="product-box">
+        <img src="../images/bag4.jpg" alt="" class="product-img">
+        <h2 class="product-title">side bag</h2>
+        <span class="price">$35</span>
+        <i class='bx bxs-shopping-bag add-cart'></i>
+
+      </div>
+      <!--box 4-->
+      <div class="product-box">
+        <img src="../images/bag5.jpg" alt="" class="product-img">
+        <h2 class="product-title">luggage bag</h2>
+        <span class="price">$42</span>
+        <i class='bx bxs-shopping-bag add-cart'></i>
+
+      </div>
+      <!--box 5-->
+      <div class="product-box">
+        <img src="../images/bagpack.jpg" alt="" class="product-img">
+        <h2 class="product-title">bagpack</h2>
+        <span class="price">$100</span>
+        <i class='bx bxs-shopping-bag add-cart'></i>
+
+      </div>
+      <!--box 6-->
+      <div class="product-box">
+        <img src="../images/bhande.jpg" alt="" class="product-img">
+        <h2 class="product-title">belt</h2>
+        <span class="price">$150</span>
+        <i class='bx bxs-shopping-bag add-cart'></i>
+
+      </div>
+      <!--box 7-->
+      <div class="product-box">
+        <img src="../images/jacket.jpg" alt="" class="product-img">
+        <h2 class="product-title"> jacket</h2>
+        <span class="price">$300</span>
+        <i class='bx bxs-shopping-bag add-cart'></i>
+
+      </div>
+      <!--box 8-->
+      <div class="product-box">
+        <img src="../images/jacket2.jpg" alt="" class="product-img">
+        <h2 class="product-title"> ladies jacket </h2>
+        <span class="price">$250</span>
+        <i class='bx bxs-shopping-bag add-cart'></i>
+
+      </div>
+      <!--box 9-->
+      <div class="product-box">
+        <img src="../images/jacket3.jpg" alt="" class="product-img">
+        <h2 class="product-title"> mens jacket </h2>
+        <span class="price">$500</span>
+        <i class='bx bxs-shopping-bag add-cart'></i>
+
+      </div>
+  </section>
+  <footer>
+    <div class="footer-container">
+
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>
+          Address: 384 Brooks Street, Menlo Park<br>
+          City, Pretoria, 0081<br>
+          Email: inkwali@yenkosi.ca.za<br>
+          Phone: +(27) 81 414 6716
+        </p>
+      </div>
+      <div class="footer-StudentsDetails">
+        <h3>Students Details</h3>
+        <div>
+          <li><a>Sibahle Shange-222529571</a></li>
+          <li><a>Hope Kgomokaboya-222152672</a></li>
+          <li><a>Pelisa Peli-217189113</a></li>
+          <li><a>Relebohile Molefe-222825790</a></li>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Inkwali Yenkosi Leather Co. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  <script src="scriptCart.js"></script>
+  <script>
+    // Get references to the search input and button
+    const searchInput = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-button');
+    const productBoxes = document.querySelectorAll('.product-box');
+
+    // Add an event listener to the search button
+    searchButton.addEventListener('click', () => {
+      performSearch();
+    });
+
+    // Add an event listener to the input field for instant search
+    searchInput.addEventListener('input', () => {
+      performSearch();
+    });
+
+    // Function to perform the search
+    function performSearch() {
+      const searchTerm = searchInput.value.toLowerCase();
+
+      // Loop through all product boxes and hide/show them based on the search term
+      productBoxes.forEach((productBox) => {
+        const productTitle = productBox.querySelector('.product-title').textContent.toLowerCase();
+
+        if (productTitle.includes(searchTerm)) {
+          productBox.style.display = 'block';
+        } else {
+          productBox.style.display = 'none';
+        }
+      });
+    }
+    // JavaScript to toggle the mobile menu
+    function toggleMobileMenu() {
+      var mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('active');
+    }
+
+    // JavaScript to handle mobile menu item clicks
+    var mobileMenuItems = document.querySelectorAll('.mobile-menu a');
+    mobileMenuItems.forEach(function (item) {
+      item.addEventListener('click', function () {
+        toggleMobileMenu(); // Close the mobile menu
+      });
+    });
+  </script>
+
+</body>
+
+</html>

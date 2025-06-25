@@ -1,0 +1,320 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Container Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ebe4f5;
+    z-index: 9;
+    padding: 10px;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .brand-logo {
+    height: 60px;
+    width: 60px;
+  }
+  .nav-items {
+    display: flex;
+    align-items: center;
+  }
+  .nav a i {
+    font-size: 32px; /* Adjust the icon size (increase this value to make the icons larger) */
+    text-decoration: none;
+  }
+  .nav li {
+   
+    margin-right: 10px; /* Decrease the margin-right value to move the icons more to the left */
+    padding-bottom: 8px;
+  }
+  .nav li :hover {
+    color: #0074d9;
+  }
+  .logo-container {
+    display: flex;
+    align-items: center;
+   
+  }
+  .nav span {
+    font-size: 20px;
+    color: black; /* Change the color as needed */
+  }
+  
+
+.nav span {
+    font-size: 20px;
+    color: black;
+    /* Change the color as needed */
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #ebe4f5;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .mobile-menu.active {
+    display: flex;
+  }
+  
+  .mobile-menu a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .menu-icon {
+    cursor: pointer;
+    color: black;
+    font-size: 30px;
+   
+    padding-right: 50px;
+  }
+  li {
+    display: inline-block;
+    margin-right: 10px; /* Decrease the margin-right value to move the icons more to the left */
+    padding-bottom: 8px;
+  }
+  
+  li :hover {
+    color: #0074d9;
+  }
+  
+
+/*@media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }*/
+
+/* DIY Methods Section Styles */
+.diy-methods {
+    background-image: url("Background2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #ebe4f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.diy-methods h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Style for the search bar and search button */
+#videoSearch {
+    padding: 5px;
+    width: 200px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#searchButton {
+    padding: 5px 10px;
+    background-color: #bd889b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style for the search results */
+#searchResults {
+    margin-top: 20px;
+}
+
+#searchResults p {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Style for the video titles in the search results */
+#searchResults h3 {
+    font-style: italic;
+    color: #bd889b;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* Style for the videos in the search results */
+#searchResults video {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Style for the "No matching videos found" message */
+#searchResults p.no-matching-videos {
+    color: #bd889b;
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+
+.diy-methods h2 {
+    font-size: 26px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #f3ead3;
+}
+
+.diy-methods h3 {
+    font-size: 22px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #ebe4f5;
+}
+
+.diy-methods h4 {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: pink;
+}
+
+.diy-methods p {
+    font-size: 20px;
+    line-height: 1.5;
+    color: white;
+}
+
+.diy-methods ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.diy-methods li {
+    font-size: 20px;
+    line-height: 1.5;
+    color: white;
+}
+
+
+/*This is is the footer*/
+footer {
+    background-color: #ebe4f5;
+  
+    padding: 30px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-logo img {
+    max-width: 150px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    color: black;
+    margin: 10px 0;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .footer-contact h3 {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .footer-contact p {
+    color: black;
+    font-size: 16px;
+    margin: 0;
+  }
+  .footer-StudentsDetails h3 {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .footer-StudentsDetails li {
+    color: black;
+    font-size: 16px;
+    margin: 0;
+    display: flex;
+  
+  }
+  
+  .footer-bottom p {
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+@media screen and (max-width: 600px) {
+
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
